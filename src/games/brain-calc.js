@@ -1,22 +1,30 @@
 import mainEngine from "../index.js";
 import randomIntFromInterval from "../getRandomNumber.js";
 
-const isCalc = (num1, num2, method) => {
-    switch (method) {
-        case "+":
+const operators = ['+', '-', '*'];
+const randomIndex = (data) => Math.floor(Math.random() * data.length);
+
+const isCalc = (num1, num2, symbol) => {
+    switch (symbol) {
+        case '+':
             return num1 + num2;
-        case "-":
+        case '-':
             return num1 - num2;
-        case "*":
+        case '*':
             return num1 * num2;
+        default:
+            return null;
     }
 };
 
 const description = 'What is the result of the expression?';
 
 const getData = () => {
-    const question = randomIntFromInterval(0, 100);
-    const questionRigth = isCalc(question);
+    const number1 = randomIntFromInterval(0, 100);
+    const number2 = randomIntFromInterval(0, 100);
+    const operator = operators[randomIndex(operators)];
+    const question = `${number1} ${operator} ${number2}`;
+    const questionRigth = isCalc(number1, number2, operator).toString();
 
     return [question, questionRigth];
 }
