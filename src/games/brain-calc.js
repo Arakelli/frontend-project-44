@@ -1,6 +1,8 @@
 import mainEngine from "../index.js";
 import randomIntFromInterval from "../getRandomNumber.js";
 
+const description = 'What is the result of the expression?';
+
 const operators = ['+', '-', '*'];
 const randomIndex = (data) => Math.floor(Math.random() * data.length);
 
@@ -17,8 +19,6 @@ const isCalc = (num1, num2, symbol) => {
     }
 };
 
-const description = 'What is the result of the expression?';
-
 const getData = () => {
     const number1 = randomIntFromInterval(0, 100);
     const number2 = randomIntFromInterval(0, 100);
@@ -27,7 +27,7 @@ const getData = () => {
     const questionRigth = isCalc(number1, number2, operator).toString();
 
     return [question, questionRigth];
-}
+};
 
 const startCalcGame = () => mainEngine(getData, description);
 
