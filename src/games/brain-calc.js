@@ -9,14 +9,14 @@ const randomIndex = (data) => Math.floor(Math.random() * data.length);
 const isCalc = (num1, num2, symbol) => {
   switch (symbol) {
     case '+':
-        return num1 + num2;
+      return num1 + num2;
     case '-':
-        return num1 - num2;
+      return num1 - num2;
     case '*':
-        return num1 * num2;
+      return num1 * num2;
     default:
-        return null;
-    }
+      return null;
+  }
 };
 
 const getData = () => {
