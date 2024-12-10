@@ -19,7 +19,7 @@ const mainEngine = (getData, description) => {
             console.log('Correct!');
         } else {
             console.log(`'${answer}' is wrong answer ;(. Correct answer was '${questionRigth}'`);
-            console.log(`Let's try again ${name}`);
+            console.log(`Let's try again ${name}!`);
             return;
         }
     }
