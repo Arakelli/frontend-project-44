@@ -24,7 +24,7 @@ const mainEngine = (getData, description) => {
         }
     }
 
-    console.log(`Congratulations, ${name}`);
+    console.log(`Congratulations, ${name}!`);
 };
 
 export default mainEngine;
