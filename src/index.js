@@ -22,7 +22,6 @@ const runGame = (getData, description) => {
     }
 
     console.log('Correct!');
-
   }
 
   console.log(`Congratulations, ${name}!`);
