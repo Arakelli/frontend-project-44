@@ -1,8 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Arakelli/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Arakelli/frontend-project-44/actions)",
-  "main": "index.js",
+  "description": "/home/gas/frontend-project-44/README.md",
   "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js",
@@ -26,14 +25,13 @@
   },
   "homepage": "https://github.com/Arakelli/frontend-project-44#readme",
   "dependencies": {
-    "eslint-plugin-import": "^2.31.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
     "@eslint/js": "^9.16.0",
     "eslint": "^9.16.0",
     "eslint-plugin-react": "^7.37.2",
-    "globals": "^15.13.0",
-    "typescript-eslint": "^8.16.0"
+    "eslint-plugin-import": "^2.31.0",
+    "globals": "^15.13.0"
   }
 }
