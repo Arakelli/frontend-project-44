@@ -5,16 +5,16 @@ const description = 'What is the result of the expression?';
 
 const operators = ['+', '-', '*'];
 
-const calculate = (num1, num2, symbol) => {
-  switch (symbol) {
+const calculate = (number1, number2, operator) => {
+  switch (operator) {
     case '+':
-      return num1 + num2;
+      return number1 + number2;
     case '-':
-      return num1 - num2;
+      return number1 - number2;
     case '*':
-      return num1 * num2;
+      return number1 * number2;
     default:
-      throw new Error(`There is no such operator like '${symbol}'`);
+      throw new Error(`There is no such operator like '${operator}'`);
   }
 };
 
@@ -23,9 +23,9 @@ const getData = () => {
   const number2 = getRandomNumber(0, 100);
   const operator = operators[getRandomNumber(0, operators.length - 1)];
   const question = `${number1} ${operator} ${number2}`;
-  const answerRigth = calculate(number1, number2, operator).toString();
+  const answer = calculate(number1, number2, operator).toString();
 
-  return [question, answerRigth];
+  return [question, answer];
 };
 
 const startCalcGame = () => runGame(getData, description);
