@@ -16,8 +16,8 @@ const getData = () => {
   const start = getRandomNumber(0, 100);
   const step = getRandomNumber(1, 10);
   const progression = getArithmeticProgression(length, start, step);
-  const randomIndex = getRandomNumber(0, progression.length).toString();
-  const answer = progression[randomIndex].toString();
+  const randomIndex = getRandomNumber(0, progression.length);
+  const answer = String(progression[randomIndex]);
   progression[randomIndex] = '..';
   const question = progression.join(' ');
 
