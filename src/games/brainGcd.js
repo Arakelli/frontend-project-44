@@ -9,9 +9,9 @@ const getData = () => {
   const number1 = getRandomNumber(0, 100);
   const number2 = getRandomNumber(0, 100);
   const question = `${number1} ${number2}`;
-  const answerRigth = calculate(number1, number2).toString();
+  const answer = calculate(number1, number2).toString();
 
-  return [question, answerRigth];
+  return [question, answer];
 };
 
 const startGCDGame = () => runGame(getData, description);
