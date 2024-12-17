@@ -11,19 +11,19 @@ const getArithmeticProgression = (length, start, step) => {
   return progression;
 };
 
-const getRandomIndex = (data) => Math.floor(Math.random() * data.length);
+// const getRandomIndex = (data) => Math.floor(Math.random() * data.length);
 
 const getData = () => {
   const length = getRandomNumber(5, 10);
   const start = getRandomNumber(0, 100);
   const step = getRandomNumber(1, 10);
   const progression = getArithmeticProgression(length, start, step);
-  const randomIndex = getRandomIndex(progression);
-  const answerRigth = progression[randomIndex].toString();
+  const randomIndex = getRandomNumber(0, progression.length);
+  const answer = progression[randomIndex].toString();
   progression[randomIndex] = '..';
   const question = progression.join(' ');
 
-  return [question, answerRigth];
+  return [question, answer];
 };
 
 const startProgressionGame = () => runGame(getData, description);
