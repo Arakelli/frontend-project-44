@@ -11,8 +11,6 @@ const getArithmeticProgression = (length, start, step) => {
   return progression;
 };
 
-// const getRandomIndex = (data) => Math.floor(Math.random() * data.length);
-
 const getData = () => {
   const length = getRandomNumber(5, 10);
   const start = getRandomNumber(0, 100);
